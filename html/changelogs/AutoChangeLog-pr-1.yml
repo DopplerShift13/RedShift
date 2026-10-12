@@ -1,0 +1,5 @@
+author: "carda-sometimesknownas-paxilmaniac"
+delete-after: True
+changes:
+  - rscadd: "adds a new armor system to supplant the default tg setup that makes armor more effective"
+  - bugfix: "fixes some warnings about unused variables in crafting"
