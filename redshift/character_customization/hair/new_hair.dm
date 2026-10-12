@@ -1,7 +1,7 @@
 // Hairstyles
 
 /datum/sprite_accessory/hair/modular
-	icon = 'redshift/character_customization/crumpaloo_hair/icons/doppler_hair.dmi'
+	icon = 'redshift/character_customization/hair/icons/doppler_hair.dmi'
 
 /datum/sprite_accessory/hair/modular/pigtails4
 	name = "Pigtails 4"
