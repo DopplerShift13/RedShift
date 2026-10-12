@@ -1,4 +1,4 @@
-/datum/job/outerbounds/administrator
+/datum/job/redshift/administrator
 	title = JOB_REDSHIFT_ADMINISTRATOR
 	description = "With a crew of rogue researchers and roughnecks like this one, someone has to be there to wrangle them towards a single goal \
 		and stop fights from breaking out in the streets. Enter the colony administrators. While many of them did not join the expedition for such a role, \
@@ -17,7 +17,7 @@
 
 /datum/outfit/job/colony_administrator
 	name = "Colony Administrator"
-	jobtype = /datum/job/outerbounds/administrator
+	jobtype = /datum/job/redshift/administrator
 
 	id_trim = /datum/id_trim/job/captain
 	uniform = /obj/item/clothing/under/rank/rnd/research_director

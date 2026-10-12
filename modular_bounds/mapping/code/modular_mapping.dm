@@ -1,4 +1,4 @@
-/obj/modular_map_root/outer_bounds
+/obj/modular_map_root/redshift
 	icon = 'icons/obj/devices/scanner.dmi'
 	icon_state = "holosheet"
-	config_file = "strings/modular_maps/outerbounds.toml"
+	config_file = "strings/modular_maps/redshift.toml"

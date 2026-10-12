@@ -11,7 +11,7 @@
 	/// The time that the operation started in world.time
 	var/operation_start_time
 	/// The file path for text replacements used in operation names
-	var/text_replace_path = "~outerbounds/operations_missions.json"
+	var/text_replace_path = "~redshift/operations_missions.json"
 
 /datum/round_operation_type/New()
 	set_up_operation_presentation()

@@ -164,7 +164,7 @@ export type CharacterPreferencesData = {
     random_body: RandomSetting;
     [otherKey: string]: unknown;
   };
-  outerbounds_lore: Record<string, unknown> /* REDSHIFT EDIT ADDITION */;
+  redshift_lore: Record<string, unknown> /* REDSHIFT EDIT ADDITION */;
   secondary_features: Record<string, unknown>;
   supplemental_features: Record<string, unknown>;
   markings: Record<string, unknown> /* REDSHIFT EDIT ADDITION */;

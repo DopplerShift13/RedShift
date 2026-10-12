@@ -17,9 +17,6 @@ import { JobsPage } from './JobsPage';
 import { LoadoutPage } from './loadout';
 import { MainPage } from './MainPage';
 import { QuirkPersonalityPage } from './QuirksPage';
-
-REDSHIFT;
-
 import { SpeciesPage } from './SpeciesPage';
 
 enum Page {
@@ -28,8 +25,8 @@ enum Page {
   Jobs,
   Species,
   Quirks,
-  Loadout,REDSHIFT
-  LanguageREDSHIFTOUNDS EDIT ADDITION */,
+  Loadout,
+  Languages /* REDSHIFT EDIT ADDITION */,
   Lore /* REDSHIFT EDIT ADDITION */,
 }
 
@@ -42,7 +39,7 @@ type ProfileProps = {
 function CharacterProfiles(props: ProfileProps) {
   const { activeSlot, onClick, profiles } = props;
 
-  return (REDSHIFT
+  return (
     <Flex /* REDSHIFT EDIT START: Dropdown instead of using buttons */
       align="center"
       justify="center"
@@ -60,7 +57,7 @@ function CharacterProfiles(props: ProfileProps) {
             onClick(slot);
           }}
         />
-      </Flex.ItREDSHIFT
+      </Flex.Item>
     </Flex> /* REDSHIFT EDIT END */
   );
 }

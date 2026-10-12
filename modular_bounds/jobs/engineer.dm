@@ -1,4 +1,4 @@
-/datum/job/outerbounds/engineer
+/datum/job/redshift/engineer
 	title = JOB_REDSHIFT_ENGINEER
 	description = "The physical half of the Outer Bounds expedition, taking roles anywhere between construction and maintenance, to \
 		exploration and colony defense. What they lack in the countless degrees and years of study of the researchers, they make up for \
@@ -17,7 +17,7 @@
 
 /datum/outfit/job/colony_engineer
 	name = "Colony Engineer"
-	jobtype = /datum/job/outerbounds/engineer
+	jobtype = /datum/job/redshift/engineer
 
 	id_trim = /datum/id_trim/job/station_engineer
 	uniform = /obj/item/clothing/under/rank/engineering/engineer/hazard

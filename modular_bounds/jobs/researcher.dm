@@ -1,4 +1,4 @@
-/datum/job/outerbounds/research
+/datum/job/redshift/research
 	title = JOB_REDSHIFT_RESEARCH
 	description = "The thinking half of the Outer Bounds expedition. Doctors, scientists, lab techs, everything in between and a few things \
 		more. While not usually as physically active as their engineer counterparts, they more than make up for this by being the scientific and \
@@ -17,7 +17,7 @@
 
 /datum/outfit/job/colony_researcher
 	name = "Colony Researcher"
-	jobtype = /datum/job/outerbounds/research
+	jobtype = /datum/job/redshift/research
 
 	id_trim = /datum/id_trim/job/scientist
 	uniform = /obj/item/clothing/under/rank/rnd/research_director/turtleneck

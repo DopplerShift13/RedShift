@@ -8,5 +8,5 @@ NC="\033[0m" # No Color
 
 echo -e "${BLUE}Re-running grep checks, but looking in modular_doppler...${NC}"
 
-# Run the linters again, but modular outer bounds code
+# Run the linters again, but modular redshift code
 sed "s|code/\*\*/\*\.dm|modular_drive_2011/\*\*/\*\.dm|g" <tools/ci/check_grep.sh | bash

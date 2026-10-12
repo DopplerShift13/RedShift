@@ -1,0 +1,4 @@
+directory = "_maps/redshift/outpost_modules/"
+
+[rooms.core]
+modules = ["core_1.dmm"]

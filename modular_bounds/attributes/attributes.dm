@@ -22,7 +22,7 @@
 
 /mob/living/carbon/verb/view_attributes()
 	set name = "Attributes"
-	set category = "Outerbounds"
+	set category = "Redshift"
 	set desc = "View your character's attributes."
 	attributes_to_chat()
 

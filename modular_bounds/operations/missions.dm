@@ -1,7 +1,7 @@
 /datum/lazy_template/mission_type
 	abstract_type = /datum/lazy_template/mission_type
 	key = null
-	map_dir = "_maps/outer_bounds/missions"
+	map_dir = "_maps/redshift/missions"
 	map_name = null
 	/// The name of the mission as described to the players
 	var/mission_name = "Unnamed Mission"

@@ -1,4 +1,0 @@
-directory = "_maps/outer_bounds/outpost_modules/"
-
-[rooms.core]
-modules = ["core_1.dmm"]

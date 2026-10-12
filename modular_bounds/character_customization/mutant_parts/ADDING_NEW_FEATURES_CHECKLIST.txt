@@ -4,4 +4,4 @@ ALL OF THESE SHOULD BE COMPLETED IN ORDER TO ADD A NEW FEATURE TYPE
     - Add a FEATURE_WHATEVER_COLOR if the feature is recolorable
 - Copy an existing feature folder and change it to whatever you need
 - Add to 'code/controllers/subsystem/sprite_accessories.dm'
-- Add relevant bits in 'tgui/packages/tgui/interfaces/PreferencesMenu/preferences/features/outerbounds_preferences/species_features.tsx'
+- Add relevant bits in 'tgui/packages/tgui/interfaces/PreferencesMenu/preferences/features/redshift_preferences/species_features.tsx'
