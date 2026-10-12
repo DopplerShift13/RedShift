@@ -7310,4 +7310,6 @@
 #include "redshift\species\species_types\reptile\bodyparts.dm"
 #include "redshift\species\species_types\reptile\reptile.dm"
 #include "redshift\species\species_types\slimes\slimes.dm"
+#include "redshift\swing_system\helpers.dm"
+#include "redshift\swing_system\swing.dm"
 // END_INCLUDE
