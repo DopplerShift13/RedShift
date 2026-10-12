@@ -166,10 +166,10 @@ GLOBAL_LIST_INIT(freqtospan, list(
 	var/freqpart = radio_freq ? "\[[get_radio_name(radio_freq, radio_freq_name)]\] " : ""
 	//Speaker name
 	var/namepart = message_mods[MODE_SPEAKER_NAME_OVERRIDE] || speaker.get_message_voice(visible_name)
-	// OUTERBOUNDS ADDITION START - Coloured chat names
+	// REDSHIFT ADDITION START - Coloured chat names
 	if(!radio_freq)
 		namepart = chat_name_color_prefs_check(speaker, src, namepart)
-	// OUTERBOUNDS ADDITION END
+	// REDSHIFT ADDITION END
 
 	//End name span.
 	var/endspanpart = "</span>"

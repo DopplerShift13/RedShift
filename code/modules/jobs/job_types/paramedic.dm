@@ -36,7 +36,7 @@
 		/obj/item/storage/box/bandages = 5,
 	)
 	rpg_title = "Corpse Runner"
-	// OUTERBOUNDS - Hide unpickable jobs // job_flags = STATION_JOB_FLAGS
+	// REDSHIFT - Hide unpickable jobs // job_flags = STATION_JOB_FLAGS
 	tgui_icon = FA_ICON_TRUCK_MEDICAL
 
 

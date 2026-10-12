@@ -43,7 +43,7 @@
 		/obj/item/skillchip/sabrage = 5,
 	)
 
-	// OUTERBOUNDS - Hide unpickable jobs // job_flags = STATION_JOB_FLAGS | HEAD_OF_STAFF_JOB_FLAGS | JOB_ANTAG_PROTECTED
+	// REDSHIFT - Hide unpickable jobs // job_flags = STATION_JOB_FLAGS | HEAD_OF_STAFF_JOB_FLAGS | JOB_ANTAG_PROTECTED
 	rpg_title = "Star Duke"
 
 	human_authority = JOB_AUTHORITY_HUMANS_ONLY

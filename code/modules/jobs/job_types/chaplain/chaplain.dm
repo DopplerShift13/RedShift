@@ -32,7 +32,7 @@
 		/obj/item/toy/plush/ratplush = 1
 	)
 	rpg_title = "Paladin"
-	// OUTERBOUNDS - Hide unpickable jobs // job_flags = STATION_JOB_FLAGS
+	// REDSHIFT - Hide unpickable jobs // job_flags = STATION_JOB_FLAGS
 
 	voice_of_god_power = 2 //Chaplains are very good at speaking with the voice of god
 

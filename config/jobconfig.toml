@@ -19,14 +19,14 @@
 ## "# Total Positions" should always be changed to "Total Positions", no additional spacing.
 ## Best of luck editing!
 
-[OUTERBOUNDS_ENGINEER]
+[REDSHIFT_ENGINEER]
 "Spawn Positions" = -1
 "Total Positions" = -1
 
-[OUTERBOUNDS_RESEARCH]
+[REDSHIFT_RESEARCH]
 "Spawn Positions" = -1
 "Total Positions" = -1
 
-[OUTERBOUNDS_ADMINISTRATOR]
+[REDSHIFT_ADMINISTRATOR]
 "Spawn Positions" = 4
 "Total Positions" = 4

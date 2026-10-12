@@ -1,5 +1,5 @@
 /datum/job/outerbounds/administrator
-	title = JOB_OUTERBOUNDS_ADMINISTRATOR
+	title = JOB_REDSHIFT_ADMINISTRATOR
 	description = "With a crew of rogue researchers and roughnecks like this one, someone has to be there to wrangle them towards a single goal \
 		and stop fights from breaking out in the streets. Enter the colony administrators. While many of them did not join the expedition for such a role, \
 		many engineers and researchers are hand picked by mission control to be leaders when required."
@@ -7,7 +7,7 @@
 	total_positions = 4
 	spawn_positions = 4
 	supervisors = SUPERVISOR_MISSION_CONTROL
-	config_tag = "OUTERBOUNDS_ADMINISTRATOR"
+	config_tag = "REDSHIFT_ADMINISTRATOR"
 	outfit = /datum/outfit/job/colony_administrator
 	paycheck = PAYCHECK_COMMAND
 	paycheck_department = ACCOUNT_SCI

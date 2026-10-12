@@ -384,7 +384,7 @@ GLOBAL_LIST_INIT(message_modes_stat_limits, list(
 
 	if(speaker != src)
 		if(!radio_freq) //These checks have to be separate, else people talking on the radio will make "You can't hear yourself!" appear when hearing people over the radio while deaf.
-			deaf_message = "[span_name("[chat_name_color_prefs_check(speaker, src)]")] [speaker.get_default_say_verb()] something but you cannot hear [speaker.p_them()]." // OUTERBOUNDS EDIT - Colored chat names - ORIGINAL: deaf_message = "[span_name("[speaker]")] [speaker.get_default_say_verb()] something but you cannot hear [speaker.p_them()]."
+			deaf_message = "[span_name("[chat_name_color_prefs_check(speaker, src)]")] [speaker.get_default_say_verb()] something but you cannot hear [speaker.p_them()]." // REDSHIFT EDIT - Colored chat names - ORIGINAL: deaf_message = "[span_name("[speaker]")] [speaker.get_default_say_verb()] something but you cannot hear [speaker.p_them()]."
 			deaf_type = MSG_VISUAL
 	else
 		deaf_message = span_notice("You can't hear yourself!")

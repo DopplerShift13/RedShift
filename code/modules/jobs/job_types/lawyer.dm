@@ -24,7 +24,7 @@
 	rpg_title = "Magistrate"
 	family_heirlooms = list(/obj/item/gavelhammer, /obj/item/book/manual/wiki/security_space_law)
 
-	// OUTERBOUNDS - Hide unpickable jobs // job_flags = STATION_JOB_FLAGS
+	// REDSHIFT - Hide unpickable jobs // job_flags = STATION_JOB_FLAGS
 
 	job_tone = "objection"
 	tgui_icon = FA_ICON_GAVEL

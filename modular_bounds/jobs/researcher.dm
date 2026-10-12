@@ -1,5 +1,5 @@
 /datum/job/outerbounds/research
-	title = JOB_OUTERBOUNDS_RESEARCH
+	title = JOB_REDSHIFT_RESEARCH
 	description = "The thinking half of the Outer Bounds expedition. Doctors, scientists, lab techs, everything in between and a few things \
 		more. While not usually as physically active as their engineer counterparts, they more than make up for this by being the scientific and \
 		medical backbone of the colony."
@@ -7,7 +7,7 @@
 	total_positions = 20
 	spawn_positions = 20
 	supervisors = SUPERVISOR_COLONY_ADMIN
-	config_tag = "OUTERBOUNDS_RESEARCH"
+	config_tag = "REDSHIFT_RESEARCH"
 	outfit = /datum/outfit/job/colony_researcher
 	paycheck = PAYCHECK_CREW
 	paycheck_department = ACCOUNT_SCI

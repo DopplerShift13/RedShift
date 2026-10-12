@@ -3,9 +3,7 @@ SUBSYSTEM_DEF(daynight)
 	ss_flags = SS_NO_FIRE
 	runlevels = RUNLEVELS_DEFAULT
 	/// List of all areas we check for in the day/night cycle
-	var/list/areas_influenced = list(
-		/area/outerbounds/surface_generator,
-	)
+	var/list/areas_influenced = list()
 	/// Color to use during day
 	var/daytime_color = "#FFFFFF"
 	/// Daytime alpha

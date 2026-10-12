@@ -102,7 +102,7 @@ export function FeatureColorInput(props: FeatureValueProps<string>) {
   );
 }
 
-/* OUTERBOUNDS ADDITION BEGIN: tricolor inputs */
+/* REDSHIFT ADDITION BEGIN: tricolor inputs */
 export function FeatureTriColorInput(props: FeatureValueProps<string[]>) {
   const { act } = useBackend<PreferencesMenuData>();
   const buttonFromValue = (index) => {
@@ -150,7 +150,7 @@ export function FeatureTriColorInput(props: FeatureValueProps<string[]>) {
     </Stack>
   );
 }
-/* OUTERBOUNDS ADDITION END */
+/* REDSHIFT ADDITION END */
 
 export type FeatureToggle = Feature<BooleanLike, boolean>;
 
@@ -317,7 +317,7 @@ export function FeatureShortTextInput(
   );
 }
 
-// OUTERBOUNDS ADDITION
+// REDSHIFT ADDITION
 export const FeatureTextInput = (
   props: FeatureValueProps<string, string, FeatureShortTextData>,
 ) => {

@@ -30,7 +30,7 @@
 		/obj/item/gun/syringe = 1
 	)
 	rpg_title = "Snake Oil Salesman"
-	// OUTERBOUNDS - Hide unpickable jobs // job_flags = STATION_JOB_FLAGS
+	// REDSHIFT - Hide unpickable jobs // job_flags = STATION_JOB_FLAGS
 	tgui_icon = FA_ICON_BRAIN
 
 

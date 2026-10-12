@@ -34,7 +34,7 @@
 		/obj/item/grenade/gas_crystal/nitrous_oxide_crystal = 5,
 	)
 
-	// OUTERBOUNDS - Hide unpickable jobs // job_flags = STATION_JOB_FLAGS
+	// REDSHIFT - Hide unpickable jobs // job_flags = STATION_JOB_FLAGS
 	rpg_title = "Aeromancer"
 	tgui_icon = FA_ICON_FAN
 

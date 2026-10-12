@@ -27,7 +27,7 @@
 		/obj/item/lightreplacer = 10
 	)
 	rpg_title = "Groundskeeper"
-	// OUTERBOUNDS - Hide unpickable jobs // job_flags = STATION_JOB_FLAGS
+	// REDSHIFT - Hide unpickable jobs // job_flags = STATION_JOB_FLAGS
 
 	job_tone = "slip"
 	tgui_icon = FA_ICON_SOAP

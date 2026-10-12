@@ -1,5 +1,5 @@
 /datum/job/outerbounds/engineer
-	title = JOB_OUTERBOUNDS_ENGINEER
+	title = JOB_REDSHIFT_ENGINEER
 	description = "The physical half of the Outer Bounds expedition, taking roles anywhere between construction and maintenance, to \
 		exploration and colony defense. What they lack in the countless degrees and years of study of the researchers, they make up for \
 		in experience and build."
@@ -7,7 +7,7 @@
 	total_positions = 20
 	spawn_positions = 20
 	supervisors = SUPERVISOR_COLONY_ADMIN
-	config_tag = "OUTERBOUNDS_ENGINEER"
+	config_tag = "REDSHIFT_ENGINEER"
 	outfit = /datum/outfit/job/colony_engineer
 	paycheck = PAYCHECK_CREW
 	paycheck_department = ACCOUNT_ENG

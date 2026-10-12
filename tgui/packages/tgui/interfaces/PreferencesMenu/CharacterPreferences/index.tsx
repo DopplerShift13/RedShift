@@ -5,19 +5,22 @@ import {
   Dropdown,
   Flex,
   Stack,
-} from 'tgui-core/components'; /* OUTERBOUNDS EDIT: Adds in Dropdown and Flex */
+} from 'tgui-core/components'; /* REDSHIFT EDIT: Adds in Dropdown and Flex */
 import { exhaustiveCheck } from 'tgui-core/exhaustive';
 
 import { PageButton } from '../components/PageButton';
+import { LanguagesPage } from '../LanguagesMenu'; /* REDSHIFT EDIT ADDITION */
+import { LorePage } from '../LorePage'; /* REDSHIFT EDIT ADDITION */
 import type { PreferencesMenuData } from '../types';
 import { AntagsPage } from './AntagsPage';
 import { JobsPage } from './JobsPage';
 import { LoadoutPage } from './loadout';
 import { MainPage } from './MainPage';
 import { QuirkPersonalityPage } from './QuirksPage';
+
+REDSHIFT;
+
 import { SpeciesPage } from './SpeciesPage';
-import { LanguagesPage } from '../LanguagesMenu'; /* OUTERBOUNDS EDIT ADDITION */
-import { LorePage } from '../LorePage'; /* OUTERBOUNDS EDIT ADDITION */
 
 enum Page {
   Antags,
@@ -25,9 +28,9 @@ enum Page {
   Jobs,
   Species,
   Quirks,
-  Loadout,
-  Languages /* OUTERBOUNDS EDIT ADDITION */,
-  Lore /* OUTERBOUNDS EDIT ADDITION */,
+  Loadout,REDSHIFT
+  LanguageREDSHIFTOUNDS EDIT ADDITION */,
+  Lore /* REDSHIFT EDIT ADDITION */,
 }
 
 type ProfileProps = {
@@ -39,8 +42,8 @@ type ProfileProps = {
 function CharacterProfiles(props: ProfileProps) {
   const { activeSlot, onClick, profiles } = props;
 
-  return (
-    <Flex /* OUTERBOUNDS EDIT START: Dropdown instead of using buttons */
+  return (REDSHIFT
+    <Flex /* REDSHIFT EDIT START: Dropdown instead of using buttons */
       align="center"
       justify="center"
     >
@@ -57,8 +60,8 @@ function CharacterProfiles(props: ProfileProps) {
             onClick(slot);
           }}
         />
-      </Flex.Item>
-    </Flex> /* OUTERBOUNDS EDIT END */
+      </Flex.ItREDSHIFT
+    </Flex> /* REDSHIFT EDIT END */
   );
 }
 
@@ -96,14 +99,14 @@ export function CharacterPreferenceWindow(props) {
       pageContents = <LoadoutPage />;
       break;
 
-    // OUTERBOUNDS EDIT START
+    // REDSHIFT EDIT START
     case Page.Lore:
       pageContents = <LorePage />;
       break;
     case Page.Languages:
       pageContents = <LanguagesPage />;
       break;
-    // OUTERBOUNDS EDIT END
+    // REDSHIFT EDIT END
 
     default:
       exhaustiveCheck(currentPage);
@@ -122,7 +125,7 @@ export function CharacterPreferenceWindow(props) {
           profiles={data.character_profiles}
         />
       </Stack.Item>
-      {/*{!data.content_unlocked && ( // OUTERBOUNDS EDIT - Hide byond premium banner
+      {/*{!data.content_unlocked && ( // REDSHIFT EDIT - Hide byond premium banner
         <Stack.Item align="center">
           Buy BYOND premium for more slots!
         </Stack.Item>
@@ -141,7 +144,7 @@ export function CharacterPreferenceWindow(props) {
             </PageButton>
           </Stack.Item>
 
-          {/* // OUTERBOUNDS EDIT ADDITION*/}
+          {/* // REDSHIFT EDIT ADDITION*/}
           <Stack.Item grow>
             <PageButton
               currentPage={currentPage}
@@ -151,7 +154,7 @@ export function CharacterPreferenceWindow(props) {
               Lore
             </PageButton>
           </Stack.Item>
-          {/* // OUTERBOUNDS EDIT ADDITION END*/}
+          {/* // REDSHIFT EDIT ADDITION END*/}
 
           <Stack.Item grow>
             <PageButton
@@ -177,7 +180,7 @@ export function CharacterPreferenceWindow(props) {
             </PageButton>
           </Stack.Item>
 
-          {/* // OUTERBOUNDS EDIT ADDITION*/}
+          {/* // REDSHIFT EDIT ADDITION*/}
           <Stack.Item grow>
             <PageButton
               currentPage={currentPage}
@@ -187,7 +190,7 @@ export function CharacterPreferenceWindow(props) {
               Languages
             </PageButton>
           </Stack.Item>
-          {/* // OUTERBOUNDS EDIT ADDITION END*/}
+          {/* // REDSHIFT EDIT ADDITION END*/}
 
           {/*<Stack.Item grow>
             <PageButton

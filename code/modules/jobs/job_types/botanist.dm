@@ -35,7 +35,7 @@
 		/obj/item/food/monkeycube/bee = 2
 	)
 
-	// OUTERBOUNDS - Hide unpickable jobs // job_flags = STATION_JOB_FLAGS
+	// REDSHIFT - Hide unpickable jobs // job_flags = STATION_JOB_FLAGS
 	rpg_title = "Gardener"
 	tgui_icon = FA_ICON_SEEDLING
 

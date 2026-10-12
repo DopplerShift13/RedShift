@@ -31,7 +31,7 @@
 		/obj/item/stack/sheet/mineral/uranium = 10,
 	)
 
-	// OUTERBOUNDS - Hide unpickable jobs // job_flags = STATION_JOB_FLAGS
+	// REDSHIFT - Hide unpickable jobs // job_flags = STATION_JOB_FLAGS
 	rpg_title = "Tavernkeeper"
 	tgui_icon = FA_ICON_COCKTAIL
 

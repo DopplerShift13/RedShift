@@ -5,10 +5,10 @@
 /// PREFERENCES
 
 /datum/preference/numeric/age
-	category = PREFERENCE_CATEGORY_OUTERBOUNDS_LORE // moves age to our funny lore page, needs manual inclusion on LorePage.tsx though
+	category = PREFERENCE_CATEGORY_REDSHIFT_LORE // moves age to our funny lore page, needs manual inclusion on LorePage.tsx though
 
 /datum/preference/numeric/chronological_age
-	category = PREFERENCE_CATEGORY_OUTERBOUNDS_LORE
+	category = PREFERENCE_CATEGORY_REDSHIFT_LORE
 	savefile_identifier = PREFERENCE_CHARACTER
 	savefile_key = "age_chronological"
 	minimum = 18
@@ -22,7 +22,7 @@
 	return preferences.read_preference(/datum/preference/numeric/age)
 
 /datum/preference/text/ooc_notes
-	category = PREFERENCE_CATEGORY_OUTERBOUNDS_LORE
+	category = PREFERENCE_CATEGORY_REDSHIFT_LORE
 	savefile_identifier = PREFERENCE_CHARACTER
 	savefile_key = "ooc_notes"
 	maximum_value_length = 4096

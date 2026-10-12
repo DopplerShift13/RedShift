@@ -6,18 +6,18 @@ import { sendAct } from 'tgui/events/act';
 import {
   Box,
   Button,
-  Dropdown, // OUTERBOUNDS ADDITION
+  Dropdown, // REDSHIFT ADDITION
   Floating,
   Input,
   LabeledList,
   Section,
   Stack,
 } from 'tgui-core/components';
-import { exhaustiveCheck } from 'tgui-core/exhaustive'; // OUTERBOUNDS ADDITION
+import { exhaustiveCheck } from 'tgui-core/exhaustive'; // REDSHIFT ADDITION
 import { classes } from 'tgui-core/react';
 import { createSearch } from 'tgui-core/string';
 import { CharacterPreview } from '../../common/CharacterPreview';
-import { PageButton } from '../components/PageButton'; // OUTERBOUNDS ADDITION
+import { PageButton } from '../components/PageButton'; // REDSHIFT ADDITION
 import { RandomizationButton } from '../components/RandomizationButton';
 import { features } from '../preferences/features';
 import {
@@ -37,7 +37,7 @@ import { DeleteCharacterPopup } from './DeleteCharacterPopup';
 import { MultiNameInput, NameInput } from './names';
 
 const CLOTHING_CELL_SIZE = 48;
-const CLOTHING_SIDEBAR_ROWS = 13.4; // OUTERBOUNDS EDIT CHANGE - ORIGINAL: 9
+const CLOTHING_SIDEBAR_ROWS = 13.4; // REDSHIFT EDIT CHANGE - ORIGINAL: 9
 
 const CLOTHING_SELECTION_CELL_SIZE = 48;
 const CLOTHING_SELECTION_WIDTH = 5.4;
@@ -460,7 +460,7 @@ export function MainPage(props: MainPageProps) {
   const [randomToggleEnabled] = useRandomToggleState();
 
   {
-    /* OUTERBOUNDS ADDITION START */
+    /* REDSHIFT ADDITION START */
   }
   enum PrefPage {
     Character, // The generic character options
@@ -469,7 +469,7 @@ export function MainPage(props: MainPageProps) {
 
   const [currentPrefPage, setCurrentPrefPage] = useState(PrefPage.Character);
   {
-    /* OUTERBOUNDS ADDITION END */
+    /* REDSHIFT ADDITION END */
   }
 
   const serverData = useServerPrefs();
@@ -500,13 +500,13 @@ export function MainPage(props: MainPageProps) {
   };
 
   {
-    /* OUTERBOUNDS ADDITION START */
+    /* REDSHIFT ADDITION START */
   }
   const MarkingPreferences = {
     ...data.character_preferences.markings,
   };
   {
-    /* OUTERBOUNDS ADDITION END */
+    /* REDSHIFT ADDITION END */
   }
 
   if (randomBodyEnabled) {
@@ -605,7 +605,7 @@ export function MainPage(props: MainPageProps) {
               />
             </Stack.Item>
 
-            {/* OUTERBOUNDS ADDITION START */}
+            {/* REDSHIFT ADDITION START */}
             <Stack.Item position="relative">
               <Dropdown
                 width="100%"
@@ -618,7 +618,7 @@ export function MainPage(props: MainPageProps) {
                 }
               />
             </Stack.Item>
-            {/* OUTERBOUNDS ADDITION END */}
+            {/* REDSHIFT ADDITION END */}
             <Stack.Item position="relative">
               <NameInput
                 name={data.character_preferences.names[data.name_to_use]}
@@ -661,7 +661,7 @@ export function MainPage(props: MainPageProps) {
         </Stack.Item>
 
         <Stack.Item grow basis={0}>
-          {/* OUTERBOUNDS EDIT BEGIN */}
+          {/* REDSHIFT EDIT BEGIN */}
           <Stack>
             <Stack.Item grow>
               <PageButton
@@ -697,7 +697,7 @@ export function MainPage(props: MainPageProps) {
             />
           </Stack>
         </Stack.Item>
-        {/* OUTERBOUNDS EDIT END */}
+        {/* REDSHIFT EDIT END */}
       </Stack>
     </>
   );

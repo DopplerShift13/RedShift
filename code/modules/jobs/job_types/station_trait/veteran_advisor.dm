@@ -34,7 +34,7 @@
 	)
 	rpg_title = "Royal Advisor"
 	allow_bureaucratic_error = FALSE
-	// OUTERBOUNDS - Hide unpickable jobs // job_flags = STATION_JOB_FLAGS | STATION_TRAIT_JOB_FLAGS | JOB_ANTAG_PROTECTED
+	// REDSHIFT - Hide unpickable jobs // job_flags = STATION_JOB_FLAGS | STATION_TRAIT_JOB_FLAGS | JOB_ANTAG_PROTECTED
 	tgui_icon = FA_ICON_RIBBON
 
 /datum/job/veteran_advisor/get_default_roundstart_spawn_point()

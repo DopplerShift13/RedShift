@@ -33,7 +33,7 @@ Assistant
 		/obj/item/crowbar/large = 1
 	)
 
-	// OUTERBOUNDS - Hide unpickable jobs // job_flags = STATION_JOB_FLAGS
+	// REDSHIFT - Hide unpickable jobs // job_flags = STATION_JOB_FLAGS
 	rpg_title = "Lout"
 	config_tag = "ASSISTANT"
 	tgui_icon = FA_ICON_TOOLBOX

@@ -15,7 +15,7 @@
 	)
 	rpg_title = "Beast of Burden"
 	allow_bureaucratic_error = FALSE
-	// OUTERBOUNDS - Hide unpickable jobs // job_flags = STATION_TRAIT_JOB_FLAGS | JOB_ANNOUNCE_ARRIVAL | JOB_NEW_PLAYER_JOINABLE | JOB_EQUIP_RANK |JOB_ANTAG_BLACKLISTED
+	// REDSHIFT - Hide unpickable jobs // job_flags = STATION_TRAIT_JOB_FLAGS | JOB_ANNOUNCE_ARRIVAL | JOB_NEW_PLAYER_JOINABLE | JOB_EQUIP_RANK |JOB_ANTAG_BLACKLISTED
 	tgui_icon = FA_ICON_PAW
 
 /datum/job/cargo_gorilla/get_roundstart_spawn_point()

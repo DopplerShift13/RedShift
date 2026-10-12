@@ -1,5 +1,5 @@
-// THIS IS AN OUTERBOUNDS UI FILE
-import { Feature } from '../base';
+// THIS IS AN REDSHIFT UI FILE
+import type { Feature } from '../base';
 import { FeatureDropdownInput } from '../dropdowns';
 
 export const loadout_override_preference: Feature<string> = {

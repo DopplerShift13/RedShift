@@ -152,7 +152,7 @@
 	var/is_visual = running_emote_type & EMOTE_VISIBLE
 	var/is_audible = running_emote_type & EMOTE_AUDIBLE
 	var/additional_message_flags = get_message_flags(intentional)
-	var/space = should_have_space_before_emote(html_decode(msg)[1]) ? " " : "" // OUTERBOUNDS EDIT ADDITION
+	var/space = should_have_space_before_emote(html_decode(msg)[1]) ? " " : "" // REDSHIFT EDIT ADDITION
 
 	// Emote doesn't get printed to chat, runechat only
 	if(running_emote_type & EMOTE_RUNECHAT)
@@ -171,22 +171,22 @@
 					runechat_flags = EMOTE_MESSAGE,
 				)
 			else if(is_important)
-				to_chat(viewer, span_emote("[chat_name_color_prefs_check(user, viewer)][space][msg]")) // OUTERBOUNDS EDIT - Coloured chat names - ORIGINAL: to_chat(viewer, span_emote("<b>[user]</b> [msg]"))
+				to_chat(viewer, span_emote("[chat_name_color_prefs_check(user, viewer)][space][msg]")) // REDSHIFT EDIT - Coloured chat names - ORIGINAL: to_chat(viewer, span_emote("<b>[user]</b> [msg]"))
 			else if(is_audible && is_visual)
 				viewer.show_message(
-					span_emote("[chat_name_color_prefs_check(user, viewer)][space][msg]"), MSG_AUDIBLE,  // OUTERBOUNDS EDIT - Coloured chat names - ORIGINAL: span_emote("<b>[user]</b> [msg]"), MSG_AUDIBLE,
-					span_emote("You see how [chat_name_color_prefs_check(user, viewer)][space][msg]"), MSG_VISUAL,  // OUTERBOUNDS EDIT - Coloured chat names - ORIGINAL: span_emote("You see how <b>[user]</b> [msg]"), MSG_VISUAL,
+					span_emote("[chat_name_color_prefs_check(user, viewer)][space][msg]"), MSG_AUDIBLE,  // REDSHIFT EDIT - Coloured chat names - ORIGINAL: span_emote("<b>[user]</b> [msg]"), MSG_AUDIBLE,
+					span_emote("You see how [chat_name_color_prefs_check(user, viewer)][space][msg]"), MSG_VISUAL,  // REDSHIFT EDIT - Coloured chat names - ORIGINAL: span_emote("You see how <b>[user]</b> [msg]"), MSG_VISUAL,
 				)
 			else if(is_audible)
-				viewer.show_message(span_emote("[chat_name_color_prefs_check(user, viewer)][space][msg]"), MSG_AUDIBLE)  // OUTERBOUNDS EDIT - Coloured chat names - ORIGINAL: viewer.show_message(span_emote("<b>[user]</b> [msg]"), MSG_AUDIBLE)
+				viewer.show_message(span_emote("[chat_name_color_prefs_check(user, viewer)][space][msg]"), MSG_AUDIBLE)  // REDSHIFT EDIT - Coloured chat names - ORIGINAL: viewer.show_message(span_emote("<b>[user]</b> [msg]"), MSG_AUDIBLE)
 			else if(is_visual)
-				viewer.show_message(span_emote("[chat_name_color_prefs_check(user, viewer)][space][msg]"), MSG_VISUAL)  // OUTERBOUNDS EDIT - Coloured chat names - ORIGINAL: viewer.show_message(span_emote("<b>[user]</b> [msg]"), MSG_VISUAL)
+				viewer.show_message(span_emote("[chat_name_color_prefs_check(user, viewer)][space][msg]"), MSG_VISUAL)  // REDSHIFT EDIT - Coloured chat names - ORIGINAL: viewer.show_message(span_emote("<b>[user]</b> [msg]"), MSG_VISUAL)
 		return // Early exit so no dchat message
 
 	// The emote has some important information, and should always be shown to the user
 	else if(is_important)
 		for(var/mob/viewer as anything in viewers(user))
-			to_chat(viewer, span_emote("[chat_name_color_prefs_check(user, viewer)][space][msg]")) // OUTERBOUNDS EDIT - Coloured chat names - ORIGINAL: to_chat(viewer, span_emote("<b>[user]</b> [msg]"))
+			to_chat(viewer, span_emote("[chat_name_color_prefs_check(user, viewer)][space][msg]")) // REDSHIFT EDIT - Coloured chat names - ORIGINAL: to_chat(viewer, span_emote("<b>[user]</b> [msg]"))
 			if(user.runechat_prefs_check(viewer, EMOTE_MESSAGE))
 				viewer.create_chat_message(
 					speaker = user,
