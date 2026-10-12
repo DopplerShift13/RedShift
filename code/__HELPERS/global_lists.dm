@@ -81,13 +81,13 @@
 						continue
 					var/datum/crafting_recipe/stack/recipe = new/datum/crafting_recipe/stack(stack, nested_recipe)
 					if(recipe.name != "" && recipe.result)
-						GLOB.crafting_recipes += recipe
+						// GLOB.crafting_recipes += recipe // REDSHIFT REMOVAL
 			else
 				if(!stack_recipe)
 					continue
 				var/datum/crafting_recipe/stack/recipe = new/datum/crafting_recipe/stack(stack, stack_recipe)
 				if(recipe.name != "" && recipe.result)
-					GLOB.crafting_recipes += recipe
+					// GLOB.crafting_recipes += recipe // REDSHIFT REMOVAL
 
 	var/list/material_stack_recipes = list(
 		SSmaterials.base_stack_recipes,
@@ -98,7 +98,7 @@
 		for(var/stack_recipe in recipe_list)
 			var/datum/crafting_recipe/stack/recipe = new/datum/crafting_recipe/stack(/obj/item/stack/sheet/iron, stack_recipe)
 			recipe.steps = list("Use different materials in hand to make an item of that material")
-			GLOB.crafting_recipes += recipe
+			// GLOB.crafting_recipes += recipe // REDSHIFT REMOVAL
 
 /// Inits atoms used in crafting recipes
 /proc/init_crafting_recipes_atoms()
