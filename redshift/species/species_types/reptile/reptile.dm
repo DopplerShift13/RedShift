@@ -2,8 +2,8 @@
 	race = /datum/species/reptile
 
 /datum/species/reptile
-	name = "\improper Cenerian"
-	plural_form = "Cenerians"
+	name = "\improper Tiziran"
+	plural_form = "Tizirans"
 	id = SPECIES_REPTILE
 	// preview_outfit =
 	inherent_traits = list(
@@ -48,14 +48,17 @@
 	preview_mob.update_body(is_creating = TRUE)
 
 /datum/species/reptile/get_species_description()
-	return "A reptile-like people originating from a hot world with an arid band around the equator that gives way to more temperate poles."
+	return "Bipedal reptiles that, excluding other species modified in a similar way, hail from the militaristic Talunan Empire outside of 4CA space."
 
 /datum/species/reptile/get_species_lore()
 	return list(
-		"It would be a proper good idea.",
+		"While taking their looks after a great many type of reptile, much of the species looks like some form of snake or lizard if compared \
+		to Earth's biology.",
 
-		"To put \
-		something interesting.",
+		"Sexual dimorphism leads to large females dull in color, and smaller males painted like the rainbow. Being sequentially hermaphroditic \
+		and influenced heavily by their environment, a Tiziran may find themselves as either gender or anywhere inbetween multiple times in their life.",
 
-		"In this space.",
+		"Excepting disability, or having been raised outside of the reaches of clan Talunan, every Tiziran has served at least a few years in \
+		the clan's military. Such a thing is seen as a rite of passage, even if the most common positions to hold will involve zero fighting and take \
+		more of a civil service role."
 	)

@@ -2,8 +2,8 @@
 	race = /datum/species/insect
 
 /datum/species/insect
-	name = "\improper Shedir"
-	plural_form = "Shedir"
+	name = "\improper Insectoid"
+	plural_form = "Insectoids"
 	id = SPECIES_INSECT
 	// preview_outfit =
 	inherent_traits = list(
@@ -47,16 +47,18 @@
 	preview_mob.update_body(is_creating = TRUE)
 
 /datum/species/insect/get_species_description()
-	return "Bipedal insectoids varying wildly in appearance between any few members. They hail from a world that, on the surface, looks barren and rocky with only \
-		a few hardy lichen surviving there. Beneath the surface, however, is an extensive network of caves and caverns that are home to life adapted to the dim \
-		tunnels, lit only by the many bioluminescent plants that call the caves their home."
+	return "Representing anything between the many Veniri around the system to other species that have modified themselves to be \
+		completely insectoid, the species is classified best by looking like a large bug of some kind."
 
 /datum/species/insect/get_species_lore()
 	return list(
-		"It would be a proper good idea.",
+		"While not always a Veniri, almost always a Veniri.",
 
-		"To put \
-		something interesting.",
+		"Despite the common assumption that every single one looks like a especially large moth, they come in the shape of \
+		many different insects both known and exotic.",
 
-		"In this space.",
+		"Between every one you can find, however, a few features are always the same.",
+
+		"A chitinous body with an exoskeleton, as well as purple-colored blood due to the unique oxygen carrying compounds \
+		used in their biology.",
 	)

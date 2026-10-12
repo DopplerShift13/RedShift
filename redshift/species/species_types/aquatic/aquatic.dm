@@ -2,8 +2,8 @@
 	race = /datum/species/aquatic
 
 /datum/species/aquatic
-	name = "\improper Persean"
-	plural_form = "Perseans"
+	name = "\improper Ordoht-like"
+	plural_form = "Ordoht-alikes"
 	id = SPECIES_AQUATIC
 	// preview_outfit =
 	inherent_traits = list(
@@ -43,14 +43,20 @@
 	preview_mob.update_body(is_creating = TRUE)
 
 /datum/species/aquatic/get_species_description()
-	return "Originating from a warm planet covered mosty in shallow oceans, Perseans are outstanding swimmers and are capable of breathing in both water and air."
+	return "Various humanoid species that have been modified into the general form of the Ordoht, seen as ideal for the conditions \
+		on New Gibraltar and other frontier worlds with large bodies of water."
 
 /datum/species/aquatic/get_species_lore()
 	return list(
-		"It would be a proper good idea.",
+		"While increasingly rare to see the Ordoht anywhere outside of their core worlds, many of their features were seen as \
+		desirable when it comes to colonization and work on frontier worlds with large bodies of water.",
 
-		"To put \
-		something interesting.",
+		"Many species, especially Tizirans and Human frontiersmen undergo extensive modification, therapy, and training to \
+		better resemble their aquatic allies.",
 
-		"In this space.",
+		"It is often the case, however, that the descendants of these original modders don't have quite as much of an affinity for \
+		the sea as their ancestors.",
+
+		"This results in third or even second generation ordoht-likes seen in odd jobs around the system, like here hunting for \
+		Hark Crusoe's lost treasure.",
 	)
