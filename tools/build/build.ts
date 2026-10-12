@@ -44,13 +44,13 @@ function getCutterPath() {
 
 const cutter_path = getCutterPath();
 
-const define_params_file = 'data/last_define_params.json'
+const define_params_file = 'data/last_define_params.json';
 
 // Have compilation defines changed since last build?
 async function defineParametersChanged(defines: string[]): Promise<boolean> {
   const defines_string = JSON.stringify(defines);
   const params_file = Bun.file(define_params_file);
-  if(!await params_file.exists()) {
+  if (!(await params_file.exists())) {
     await params_file.write(defines_string);
     return true;
   }
@@ -175,11 +175,7 @@ export const DmMapsIncludeTarget = new Juke.Target({
 });
 
 export const BehaviorTreeCompilerTarget = new Juke.Target({
-  inputs: [
-    'code/**/*.bt.json',
-    'code/__DEFINES/**/*.dm',
-    'tools/build_bt.py',
-  ],
+  inputs: ['code/**/*.bt.json', 'code/__DEFINES/**/*.dm', 'tools/build_bt.py'],
   outputs: () => {
     return Juke.glob('code/**/*.bt.json').map((file) => {
       const rel = file.replace(/\.bt\.json$/, '');
@@ -212,14 +208,17 @@ export const DmTarget = new Juke.Target({
     'html/**',
     'icons/**',
     'interface/**',
-    'modular_bounds/**',
+    'redshift/**',
     'sound/**',
     'tgui/public/tgui.html',
     `${DME_NAME}.dme`,
     NamedVersionFile,
   ],
   outputs: async ({ get }) => {
-    if (get(DmVersionParameter) || await defineParametersChanged(get(DefineParameter))) {
+    if (
+      get(DmVersionParameter) ||
+      (await defineParametersChanged(get(DefineParameter)))
+    ) {
       // Always rebuild when a dm version is provided or CLI defines have changed from last run
       return [];
     }
