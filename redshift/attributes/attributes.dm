@@ -1,8 +1,7 @@
 /mob/living/carbon
 	/// List of all of this mob's attributes and their values
 	var/list/attributes = list(
-		ATTRIBUTE_WILLPOWER = MAX_ATTRIBUTE_SCORE,
-		ATTRIBUTE_SELF = DEFAULT_ATTRIBUTE_SCORE,
+		ATTRIBUTE_AURA = DEFAULT_ATTRIBUTE_SCORE,
 		ATTRIBUTE_SMARTS = DEFAULT_ATTRIBUTE_SCORE,
 		ATTRIBUTE_INTUITION = DEFAULT_ATTRIBUTE_SCORE,
 		ATTRIBUTE_MUSCLE = DEFAULT_ATTRIBUTE_SCORE,
@@ -11,8 +10,7 @@
 	)
 	/// List of current attribute modifiers, ATTRIBUTE_WHATEVER = modifier number
 	var/list/attribute_modifiers = list(
-		ATTRIBUTE_WILLPOWER = 0,
-		ATTRIBUTE_SELF = 0,
+		ATTRIBUTE_AURA = 0,
 		ATTRIBUTE_SMARTS = 0,
 		ATTRIBUTE_INTUITION = 0,
 		ATTRIBUTE_MUSCLE = 0,
@@ -78,34 +76,20 @@
 /// Returns a title for a specific attribute level per attribute
 /proc/get_attribute_title(attribute, score)
 	switch(attribute)
-		if(ATTRIBUTE_WILLPOWER)
+		if(ATTRIBUTE_AURA)
 			switch(score)
 				if(0)
-					return "Broken"
+					return "Indebted"
 				if(1)
-					return "Dangerously Low"
-				if(2 to 3)
-					return "Low"
-				if(4 to 6)
-					return "Suggestible"
-				if(7 to 9)
-					return "Strong"
-				if(10)
-					return "Flawless"
-		if(ATTRIBUTE_SELF)
-			switch(score)
-				if(0)
-					return "..."
-				if(1)
-					return "Abysmal"
+					return "Zero"
 				if(2)
-					return "Little"
+					return "Nobody"
 				if(3 to 4)
-					return "Questionable"
+					return "Small-Time"
 				if(5 to 8)
-					return "Individual"
+					return "Recognizable"
 				if(9 to 10)
-					return "Strong"
+					return "Immense"
 		if(ATTRIBUTE_SMARTS)
 			switch(score)
 				if(0)
@@ -125,7 +109,7 @@
 				if(0 to 2)
 					return "Clueless"
 				if(3 to 4)
-					return "Slow"
+					return "Dim"
 				if(5 to 7)
 					return "Average"
 				if(8 to 9)
@@ -143,7 +127,7 @@
 				if(8 to 9)
 					return "Strong"
 				if(10)
-					return "Colossal"
+					return "Jovian"
 		if(ATTRIBUTE_REFLEX)
 			switch(score)
 				if(0 to 4)

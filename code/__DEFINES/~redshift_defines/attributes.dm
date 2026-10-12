@@ -1,8 +1,5 @@
-// All of these together is WRIMASS, isn't that special
-/// Willpower, how much you are able to resist outside influences, or control your own
-#define ATTRIBUTE_WILLPOWER "willpower"
-/// Self, or how strongly you recognize yourself as an individual will free will
-#define ATTRIBUTE_SELF "self"
+/// Aura, how recognizable a character is to all of the others
+#define ATTRIBUTE_AURA "aura"
 /// Smarts, a measure of either learned book knowledge
 #define ATTRIBUTE_SMARTS "smarts"
 /// Intuition, a measure of how you can either apply smarts practically, or figure something out
