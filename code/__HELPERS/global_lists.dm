@@ -12,7 +12,7 @@
 
 /// Inits crafting recipe lists
 /proc/init_crafting_recipes()
-	for(var/datum/crafting_recipe_path as anything in valid_subtypesof(/datum/crafting_recipe))
+	for(var/datum/crafting_recipe_path as anything in valid_subtypesof(/datum/crafting_recipe/redshift)) // REDSHIFT EDIT - for(var/datum/crafting_recipe_path as anything in valid_subtypesof(/datum/crafting_recipe))
 		var/datum/crafting_recipe/recipe = new crafting_recipe_path()
 		if(recipe.name == "" || !recipe.result)
 			qdel(recipe)
