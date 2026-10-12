@@ -361,7 +361,20 @@
 	if(ishuman(src) || client) // istype(src) is kinda bad, but it's to avoid spamming the blackbox
 		SSblackbox.record_feedback("nested tally", "item_used_for_combat", 1, list("[attacking_item.force]", "[attacking_item.type]"))
 		SSblackbox.record_feedback("tally", "zone_targeted", 1, user.zone_selected)
-
+	// REDSHIFT EDIT
+	var/hard_protection = get_zone_armor_type(targeting)
+	var/stored_force = final_force
+	var/used_armor_block = armor_block
+	if(hard_protection)
+		switch(used_armor_block)
+			if(-INFINITY to 50)
+				used_armor_block = 75
+			if(51 to 75)
+				used_armor_block = 50
+			else
+				used_armor_block = 25
+		final_force = max((final_force - (armor_block / 4)), 0)
+	// REDSHIFT EDIT END
 	var/damage_done = apply_damage(
 		damage = final_force,
 		damagetype = attacking_item.damtype,
@@ -373,7 +386,7 @@
 		attack_direction = get_dir(user, src),
 		attacking_item = attacking_item,
 	)
-
+	damage_armor(stored_force, attacking_item.damtype, targeting) // REDSHIFT ADDITION
 	LAZYSET(attack_modifiers, DAMAGE_DONE, damage_done)
 	attack_effects(damage_done, targeting, armor_block, attacking_item, user)
 

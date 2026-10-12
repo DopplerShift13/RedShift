@@ -33,6 +33,7 @@
 			if(!(recipe.crafting_flags & CRAFT_MUST_BE_LEARNED))
 				GLOB.crafting_recipes_default += recipe
 
+	/* // REDSHIFT REMOVAL
 	var/list/global_stack_recipes = list(
 		/obj/item/stack/sheet/glass = GLOB.glass_recipes,
 		/obj/item/stack/sheet/plasmaglass = GLOB.pglass_recipes,
@@ -71,7 +72,9 @@
 		/obj/item/stack/rods = GLOB.rod_recipes,
 		/obj/item/stack/sheet/runed_metal = GLOB.runed_metal_recipes,
 	)
+	*/ // REDSHIFT REMOVAL END
 
+	/* // REDSHIFT REMOVAL
 	for(var/stack in global_stack_recipes)
 		for(var/stack_recipe in global_stack_recipes[stack])
 			if(istype(stack_recipe, /datum/stack_recipe_list))
@@ -81,13 +84,14 @@
 						continue
 					var/datum/crafting_recipe/stack/recipe = new/datum/crafting_recipe/stack(stack, nested_recipe)
 					if(recipe.name != "" && recipe.result)
-						// GLOB.crafting_recipes += recipe // REDSHIFT REMOVAL
+						GLOB.crafting_recipes += recipe
 			else
 				if(!stack_recipe)
 					continue
 				var/datum/crafting_recipe/stack/recipe = new/datum/crafting_recipe/stack(stack, stack_recipe)
 				if(recipe.name != "" && recipe.result)
-					// GLOB.crafting_recipes += recipe // REDSHIFT REMOVAL
+					GLOB.crafting_recipes += recipe
+	*/ // REDSHIFT REMOVAL END
 
 	var/list/material_stack_recipes = list(
 		SSmaterials.base_stack_recipes,
