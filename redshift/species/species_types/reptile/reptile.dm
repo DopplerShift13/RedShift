@@ -9,11 +9,13 @@
 	inherent_traits = list(
 		TRAIT_MUTANT_COLORS,
 	)
-	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID
+	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_REPTILE
 	mutant_organs = list(
 		/obj/item/organ/snout/ob = SPRITE_ACCESSORY_NONE,
 		/obj/item/organ/tail/ob = SPRITE_ACCESSORY_NONE,
 		/obj/item/organ/horns/ob = SPRITE_ACCESSORY_NONE,
+		/obj/item/organ/frills = SPRITE_ACCESSORY_NONE,
+		/obj/item/organ/spines = SPRITE_ACCESSORY_NONE,
 	)
 	mutantears = /obj/item/organ/ears/ob
 	exotic_bloodtype = /datum/blood_type/copper
@@ -42,9 +44,11 @@
 	preview_mob.dna.features[FEATURE_OB_SNOUT] = SPRITE_ACCESSORY_NONE
 	preview_mob.dna.features[FEATURE_MUTANT_COLOR] = "#5f9597"
 	preview_mob.dna.features[FEATURE_OB_HORNS] = "Lizard - Ram (Alt)"
+	preview_mob.dna.species.mutant_organs[/obj/item/organ/horns/ob] = "Lizard - Ram (Alt)"
 	preview_mob.dna.features[FEATURE_OB_HORNS_COLOR] = "#353535"
 	preview_mob.set_haircolor("#b9985a", update = FALSE)
 	preview_mob.set_hairstyle("Comet", update = TRUE)
+	regenerate_organs(preview_mob)
 	preview_mob.update_body(is_creating = TRUE)
 
 /datum/species/reptile/get_species_description()

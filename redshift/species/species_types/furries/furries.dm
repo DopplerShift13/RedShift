@@ -40,10 +40,15 @@
 
 /datum/species/furries/prepare_human_for_preview(mob/living/carbon/human/preview_mob)
 	preview_mob.dna.features[FEATURE_MUTANT_COLOR] = "#64564e"
-	preview_mob.dna.features[FEATURE_OB_SNOUT] = "Nanthi - Lynx"
+	preview_mob.dna.features[FEATURE_OB_SNOUT] = "Nanthi - Felinid"
+	preview_mob.dna.species.mutant_organs[/obj/item/organ/snout/ob] = "Nanthi - Felinid"
 	preview_mob.dna.features[FEATURE_OB_SNOUT_COLOR] = "#64564e"
-	preview_mob.dna.features[FEATURE_OB_EARS] = "Nanthi - Felinid"
+	preview_mob.dna.features[FEATURE_OB_EARS] = "Nanthi - Lynx"
+	preview_mob.dna.species.mutant_organs[/obj/item/organ/ears/ob] = "Nanthi - Lynx"
 	preview_mob.dna.features[FEATURE_OB_EARS_COLOR] = "#64564e"
+	preview_mob.set_haircolor("#92669b", update = FALSE)
+	preview_mob.set_hairstyle("Kajam", update = TRUE)
+	regenerate_organs(preview_mob)
 	preview_mob.update_body(is_creating = TRUE)
 
 /datum/species/furries/get_species_description()

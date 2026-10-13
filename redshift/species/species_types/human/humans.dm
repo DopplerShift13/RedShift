@@ -22,9 +22,11 @@
 /datum/species/human/prepare_human_for_preview(mob/living/carbon/human/preview_mob)
 	preview_mob.skin_tone = "mixed1"
 	preview_mob.dna.features[FEATURE_OB_EARS] = "Solari - Wide Elf"
+	preview_mob.dna.species.mutant_organs[/obj/item/organ/ears/ob] = "Solari - Wide Elf"
 	preview_mob.dna.features[FEATURE_OB_EARS_COLOR] = "#a57a66"
 	preview_mob.set_haircolor("#2c2b2a", update = FALSE)
 	preview_mob.set_hairstyle("Chunky Twin Buns", update = TRUE)
+	regenerate_organs(preview_mob)
 	preview_mob.update_body(is_creating = TRUE)
 
 /datum/species/human/get_species_description()

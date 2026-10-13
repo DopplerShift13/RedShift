@@ -9,10 +9,12 @@
 	inherent_traits = list(
 		TRAIT_MUTANT_COLORS,
 	)
-	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID
+	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_AQUATIC
 	mutant_organs = list(
 		/obj/item/organ/tail/ob = SPRITE_ACCESSORY_NONE,
 		/obj/item/organ/horns/ob = SPRITE_ACCESSORY_NONE,
+		/obj/item/organ/frills = SPRITE_ACCESSORY_NONE,
+		/obj/item/organ/spines = SPRITE_ACCESSORY_NONE,
 	)
 	mutantears = /obj/item/organ/ears/ob
 	mutanteyes = /obj/item/organ/eyes/aquatic

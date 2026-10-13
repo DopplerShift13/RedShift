@@ -2,8 +2,8 @@
 	race = /datum/species/avian
 
 /datum/species/avian
-	name = "\improper Aviamod"
-	plural_form = "Aviamods"
+	name = "\improper Alcyoni"
+	plural_form = "Alcyoni"
 	id = SPECIES_AVIAN
 	// preview_outfit =
 	inherent_traits = list(
@@ -42,9 +42,11 @@
 	preview_mob.dna.features[FEATURE_MUTANT_COLOR] = "#837d79"
 	preview_mob.dna.features[FEATURE_OB_SNOUT_COLOR] = "#252524"
 	preview_mob.dna.features[FEATURE_OB_SNOUT] = "Beak - Normal"
+	preview_mob.dna.species.mutant_organs[/obj/item/organ/snout/ob] = "Beak - Normal"
 	preview_mob.set_haircolor("#c7c4c2", update = FALSE)
 	preview_mob.set_hairstyle("Alcyoni - Rooster", update = TRUE)
-	preview_mob.update_body(is_creating = TRUE)
+	regenerate_organs(preview_mob)
+	preview_mob.update_body(TRUE)
 
 /datum/species/avian/get_species_description()
 	return "Various humanoid species that have been modified with avian-like feathery features to better occupy planets in Crusoe's Rest such \
