@@ -15,3 +15,10 @@
 #define MAX_ATTRIBUTE_SCORE 10
 /// The default value of an attribute
 #define DEFAULT_ATTRIBUTE_SCORE 5
+
+/// The maximum value that a skill can hold
+#define MAX_SKILL_LEVEL 15
+
+// All skills that a mob can have are defined below
+/// Skill at using non-weapon items as a weapon
+#define SKILL_WEAPON_ECCENTRIC "Eccentric Weapon User"

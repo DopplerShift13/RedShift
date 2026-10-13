@@ -17,7 +17,6 @@
 	limb_id = SPECIES_INSECT
 	should_draw_greyscale = TRUE
 	unarmed_attack_verbs = list("slash", "scratch", "claw")
-	unarmed_attack_verbs = list("slashed", "scratched", "clawed")
 	grappled_attack_verb = "lacerate"
 	grappled_attack_verb_continuous = "lacerates"
 	unarmed_attack_effect = ATTACK_EFFECT_CLAW
@@ -29,7 +28,6 @@
 	limb_id = SPECIES_INSECT
 	should_draw_greyscale = TRUE
 	unarmed_attack_verbs = list("slash", "scratch", "claw")
-	unarmed_attack_verbs = list("slashed", "scratched", "clawed")
 	grappled_attack_verb = "lacerate"
 	grappled_attack_verb_continuous = "lacerates"
 	unarmed_attack_effect = ATTACK_EFFECT_CLAW
