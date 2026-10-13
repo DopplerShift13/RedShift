@@ -1,0 +1,4 @@
+author: "carda-sometimesknownas-paxilmaniac"
+delete-after: True
+changes:
+  - rscadd: "money now displays as the right thing instead of credits"
