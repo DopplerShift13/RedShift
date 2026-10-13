@@ -12,4 +12,4 @@
 		span_selfwarning("[attack_message_victim]"), null, COMBAT_MESSAGE_RANGE, user)
 	if(is_blind())
 		to_chat(src, span_selfwarning("Someone misses you!"))
-	to_chat(user, span_selfwarning("[attack_message_attacker]"))
+	to_chat(user, span_danger("[attack_message_attacker]"))

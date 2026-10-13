@@ -546,10 +546,10 @@
 	if(user == src)
 		attack_message_victim = "You [message_verb_simple] yourself[message_hit_area] with [weapon]."
 	visible_message(span_danger("[attack_message_spectator]"),\
-		span_selfwarning("[attack_message_victim]"), null, COMBAT_MESSAGE_RANGE, user) // REDSHIFT EDIT - span_userdanger("[attack_message_victim]") , null, COMBAT_MESSAGE_RANGE, user)
+		span_boldselfwarning("[attack_message_victim]"), null, COMBAT_MESSAGE_RANGE, user) // REDSHIFT EDIT - span_userdanger("[attack_message_victim]") , null, COMBAT_MESSAGE_RANGE, user)
 	if(is_blind())
 		to_chat(src, span_selfwarning("Someone hits you[message_hit_area]!")) // REDSHIFT EDIT - to_chat(src, span_danger("Someone hits you[message_hit_area]!"))
-	to_chat(user, span_selfwarning("[attack_message_attacker]")) // REDSHIFT EDIT - to_chat(user, span_danger("[attack_message_attacker]"))
+	to_chat(user, span_danger("[attack_message_attacker]"))
 	return 1
 
 /// Overridable proc so subtypes can have unique targetted strike zone messages, return a string.

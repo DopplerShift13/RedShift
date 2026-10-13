@@ -10,12 +10,12 @@
 	)
 	/// List of current attribute modifiers, ATTRIBUTE_WHATEVER = modifier number
 	var/list/attribute_modifiers = list(
-		ATTRIBUTE_AURA = 0,
-		ATTRIBUTE_SMARTS = 0,
-		ATTRIBUTE_INTUITION = 0,
-		ATTRIBUTE_MUSCLE = 0,
-		ATTRIBUTE_REFLEX = 0,
-		ATTRIBUTE_AWARENESS = 0,
+		ATTRIBUTE_AURA = -INFINITY,
+		ATTRIBUTE_SMARTS = 3,
+		ATTRIBUTE_INTUITION = -3,
+		ATTRIBUTE_MUSCLE = -4,
+		ATTRIBUTE_REFLEX = 1,
+		ATTRIBUTE_AWARENESS = 5,
 	)
 
 /mob/living/verb/view_attributes()
@@ -29,12 +29,12 @@
 	var/attributes_text = ""
 	for(var/attribute in attributes)
 		var/modifier = attribute_modifiers[attribute]
-		attributes_text += "[capitalize(attribute)] ([get_attribute_title(attribute, get_attribute_score(attribute))])"
+		attributes_text += "[get_attribute_title(attribute, get_attribute_score(attribute))] [capitalize(attribute)]"
 		attributes_text += " - [get_attribute_score(attribute)]"
 		if(modifier == 0)
 			attributes_text += "<br>"
 			continue
-		attributes_text += " - [attributes[attribute]][modifier < 0 ? span_red("[modifier]") : span_green("+[modifier]")]<br>"
+		attributes_text += "([attributes[attribute]][modifier < 0 ? span_red("[modifier]") : span_green("+[modifier]")])<br>"
 	to_chat(src, fieldset_block("Attributes", attributes_text, "boxed_message"))
 
 /// Adjusts a carbon's attribute modifier by a given amount
@@ -97,15 +97,16 @@
 
 /// Returns a title for a specific attribute level per attribute
 /proc/get_attribute_title(attribute, score)
+	score = clamp(score, 0, MAX_ATTRIBUTE_SCORE)
 	switch(attribute)
 		if(ATTRIBUTE_AURA)
 			switch(score)
 				if(0)
-					return "Indebted"
+					return "Bankrupt"
 				if(1)
 					return "Zero"
 				if(2)
-					return "Nobody"
+					return "Unobservable"
 				if(3 to 4)
 					return "Small-Time"
 				if(5 to 8)
@@ -115,7 +116,7 @@
 		if(ATTRIBUTE_SMARTS)
 			switch(score)
 				if(0)
-					return "Thoughtless"
+					return "Zero"
 				if(1 to 3)
 					return "Low"
 				if(4 to 6)
@@ -137,7 +138,7 @@
 				if(8 to 9)
 					return "Quick"
 				if(10)
-					return "Engineer"
+					return "Engineer's"
 		if(ATTRIBUTE_MUSCLE)
 			switch(score)
 				if(0 to 1)
@@ -163,7 +164,7 @@
 		if(ATTRIBUTE_AWARENESS)
 			switch(score)
 				if(0)
-					return "Practically Blind"
+					return "Practically No"
 				if(1 to 2)
 					return "Unobservant"
 				if(3 to 4)

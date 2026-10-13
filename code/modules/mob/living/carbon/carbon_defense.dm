@@ -131,7 +131,7 @@
 	if(user == src)
 		attack_message_victim = "You [message_verb_simple] yourself[message_hit_area] with [weapon][extra_wound_details]!"
 	visible_message(span_danger("[attack_message_spectator]"),\
-		span_userdanger("[attack_message_victim]"), null, COMBAT_MESSAGE_RANGE, user)
+		span_boldselfwarning("[attack_message_victim]"), null, COMBAT_MESSAGE_RANGE, user) // REDSHIFT EDIT - span_userdanger("[attack_message_victim]"), null, COMBAT_MESSAGE_RANGE, user)
 	if(user != src)
 		to_chat(user, span_danger("[attack_message_attacker]"))
 	return TRUE
