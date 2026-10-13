@@ -21,4 +21,4 @@
 
 // All skills that a mob can have are defined below
 /// Skill at using non-weapon items as a weapon
-#define SKILL_WEAPON_ECCENTRIC "weapons_eccentric"
+#define SKILL_WEAPON_ECCENTRIC "Eccentric Weapon User"
