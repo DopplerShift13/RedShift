@@ -2,8 +2,8 @@
 	race = /datum/species/furries
 
 /datum/species/furries
-	name = "\improper Nanthi"
-	plural_form = "Nanthi"
+	name = "\improper Carnivae"
+	plural_form = "Carnivae"
 	id = SPECIES_FURRIES
 	// preview_outfit =
 	inherent_traits = list(
@@ -40,22 +40,26 @@
 
 /datum/species/furries/prepare_human_for_preview(mob/living/carbon/human/preview_mob)
 	preview_mob.dna.features[FEATURE_MUTANT_COLOR] = "#64564e"
-	preview_mob.dna.features[FEATURE_OB_SNOUT] = "Nanthi - Lynx"
+	preview_mob.dna.features[FEATURE_OB_SNOUT] = "Nanthi - Felinid"
+	preview_mob.dna.species.mutant_organs[/obj/item/organ/snout/ob] = "Nanthi - Felinid"
 	preview_mob.dna.features[FEATURE_OB_SNOUT_COLOR] = "#64564e"
-	preview_mob.dna.features[FEATURE_OB_EARS] = "Nanthi - Felinid"
+	preview_mob.dna.features[FEATURE_OB_EARS] = "Nanthi - Lynx"
+	preview_mob.dna.species.mutant_organs[/obj/item/organ/ears/ob] = "Nanthi - Lynx"
 	preview_mob.dna.features[FEATURE_OB_EARS_COLOR] = "#64564e"
+	preview_mob.set_haircolor("#92669b", update = FALSE)
+	preview_mob.set_hairstyle("Kajam", update = TRUE)
+	regenerate_organs(preview_mob)
 	preview_mob.update_body(is_creating = TRUE)
 
 /datum/species/furries/get_species_description()
-	return "A furred people, usually sharing many features with earth's felidae, vulpes, and canidae life, often a mixture of the three. Their home planet resembles \
-		the countrysides of Earth's European continent."
+	return "The general classification of (as much as no individual member would like it to be true) distantly related species of \
+		mostly carnivorous furred humanoids such as Vulpkanin, Tajaran, or even simply heavily modified humanoids of other species."
 
 /datum/species/furries/get_species_lore()
 	return list(
-		"It would be a proper good idea.",
+		"While differing heavily between the actual species representing, many features are similar between individual members.",
 
-		"To put \
-		something interesting.",
+		"Most have fur, a matching tail and ears, and generally fall under the features of those found in foxes, canines, or felines.",
 
-		"In this space.",
+		"Another common sight among many is the presence of doubled body features, between eyes, ears, tails, often even internal organs.",
 	)

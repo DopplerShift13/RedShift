@@ -2,18 +2,20 @@
 	race = /datum/species/insect
 
 /datum/species/insect
-	name = "\improper Shedir"
-	plural_form = "Shedir"
+	name = "\improper Insectoid"
+	plural_form = "Insectoids"
 	id = SPECIES_INSECT
 	// preview_outfit =
 	inherent_traits = list(
 		TRAIT_MUTANT_COLORS,
 	)
-	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID
+	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_BUG
 	mutant_organs = list(
 		/obj/item/organ/snout/ob = SPRITE_ACCESSORY_NONE,
 		/obj/item/organ/tail/ob = SPRITE_ACCESSORY_NONE,
 		/obj/item/organ/horns/ob = SPRITE_ACCESSORY_NONE,
+		/obj/item/organ/wings/moth = SPRITE_ACCESSORY_NONE,
+		/obj/item/organ/antennae = SPRITE_ACCESSORY_NONE,
 	)
 	mutanteyes = /obj/item/organ/eyes/insect
 	mutantears = /obj/item/organ/ears/ob
@@ -41,22 +43,29 @@
 /datum/species/insect/prepare_human_for_preview(mob/living/carbon/human/preview_mob)
 	preview_mob.dna.features[FEATURE_MUTANT_COLOR] = "#4c5050"
 	preview_mob.dna.features[FEATURE_OB_SNOUT] = "Insect - Itty-Bitty"
+	preview_mob.dna.species.mutant_organs[/obj/item/organ/snout/ob] = "Insect - Itty-Bitty"
 	preview_mob.dna.features[FEATURE_OB_SNOUT_COLOR] = "#353535"
 	preview_mob.dna.features[FEATURE_OB_EARS] = "Antennae - Straight"
+	preview_mob.dna.species.mutant_organs[/obj/item/organ/ears/ob] = "Antennae - Straight"
 	preview_mob.dna.features[FEATURE_OB_EARS_COLOR] = "#353535"
+	preview_mob.set_haircolor("#4b6675", update = FALSE)
+	preview_mob.set_hairstyle("Rows 2", update = TRUE)
+	regenerate_organs(preview_mob)
 	preview_mob.update_body(is_creating = TRUE)
 
 /datum/species/insect/get_species_description()
-	return "Bipedal insectoids varying wildly in appearance between any few members. They hail from a world that, on the surface, looks barren and rocky with only \
-		a few hardy lichen surviving there. Beneath the surface, however, is an extensive network of caves and caverns that are home to life adapted to the dim \
-		tunnels, lit only by the many bioluminescent plants that call the caves their home."
+	return "Representing anything between the many Veniri around the system to other species that have modified themselves to be \
+		completely insectoid, the species is classified best by looking like a large bug of some kind."
 
 /datum/species/insect/get_species_lore()
 	return list(
-		"It would be a proper good idea.",
+		"While not always a Veniri, almost always a Veniri.",
 
-		"To put \
-		something interesting.",
+		"Despite the common assumption that every single one looks like a especially large moth, they come in the shape of \
+		many different insects both known and exotic.",
 
-		"In this space.",
+		"Between every one you can find, however, a few features are always the same.",
+
+		"A chitinous body with an exoskeleton, as well as purple-colored blood due to the unique oxygen carrying compounds \
+		used in their biology.",
 	)

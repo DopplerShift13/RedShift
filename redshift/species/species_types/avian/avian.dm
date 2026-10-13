@@ -42,20 +42,28 @@
 	preview_mob.dna.features[FEATURE_MUTANT_COLOR] = "#837d79"
 	preview_mob.dna.features[FEATURE_OB_SNOUT_COLOR] = "#252524"
 	preview_mob.dna.features[FEATURE_OB_SNOUT] = "Beak - Normal"
+	preview_mob.dna.species.mutant_organs[/obj/item/organ/snout/ob] = "Beak - Normal"
 	preview_mob.set_haircolor("#c7c4c2", update = FALSE)
 	preview_mob.set_hairstyle("Alcyoni - Rooster", update = TRUE)
-	preview_mob.update_body(is_creating = TRUE)
+	regenerate_organs(preview_mob)
+	preview_mob.update_body(TRUE)
 
 /datum/species/avian/get_species_description()
-	return "Feathered avian type peoples coming from a homeworld with a troubled tectonic history, resulting in volcanic islands the size of small continents \
-		surrounded by deep oceans, making flat land a premium."
+	return "Various humanoid species that have been modified with avian-like feathery features to better occupy planets in Crusoe's Rest such \
+		as Truth and Accord."
 
 /datum/species/avian/get_species_lore()
 	return list(
-		"It would be a proper good idea.",
+		"When searching for a viable solution for genetic modification of peoples of multiple species to best fit the climates of Truth and Accord, \
+		anything with fur was written off due to the logistical problems that introducing even more furred species onto a closed environment would \
+		introduce.",
 
-		"To put \
-		something interesting.",
+		"Drawing inspiration from other natural cold-weather life, avian-like feathers were chosen after observations of effective arctic \
+		birds of prey were brought to the table.",
 
-		"In this space.",
+		"Depending on the original species of the modder, they may look anywhere between an anthropomorphised arctic bird, to a feathered \
+		reptile.",
+
+		"While thriving in cold environments, variations in more tropical styles for New Gibraltar are also a common sight, though as more \
+		of a fashion statement than a practical need.",
 	)

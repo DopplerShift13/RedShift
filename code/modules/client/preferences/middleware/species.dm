@@ -16,7 +16,7 @@
 
 		var/mob/living/carbon/human/dummy/consistent/dummy = new
 		dummy.set_species(species_type)
-		dummy.equipOutfit(/datum/outfit/job/assistant/consistent, visuals_only = TRUE)
+		dummy.equipOutfit(species_type.preview_outfit, visuals_only = TRUE) // REDSHIFT EDIT - dummy.equipOutfit(/datum/outfit/job/assistant/consistent, visuals_only = TRUE)
 		dummy.dna.species.prepare_human_for_preview(dummy)
 
 		var/datum/universal_icon/dummy_icon = get_flat_uni_icon(dummy)
