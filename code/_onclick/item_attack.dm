@@ -317,12 +317,24 @@
 	return ATTACK_FAILED
 
 /mob/living/attacked_by(obj/item/attacking_item, mob/living/user, list/modifiers, list/attack_modifiers)
-
+	// REDSHIFT ADDITION
+	var/chance_to_actually_get_hit = 100
+	if(user != src) // If we're attacking ourselves we always hit
+		chance_to_actually_get_hit += get_melee_dodge_modifier()
+		if(!isnull(attacking_item.combat_skill_hit_chance))
+			chance_to_actually_get_hit += user.target_chance_skill_modifier(attacking_item.combat_skill_hit_chance)
+		if(!prob(chance_to_actually_get_hit))
+			make_attack_dodge_message(attacking_item, user)
+	// REDSHIFT ADDITION END
 	var/targeting = check_zone(user.zone_selected)
 	if(user != src)
 		var/zone_hit_chance = 80
 		if(body_position == LYING_DOWN)
 			zone_hit_chance += 10
+		// REDSHIFT ADDITION
+		if(!isnull(attacking_item.combat_skill_hit_chance))
+			zone_hit_chance += user.target_chance_skill_modifier(attacking_item.combat_skill_hit_chance)
+		// REDSHIFT ADDITION END
 		targeting = get_random_valid_zone(targeting, zone_hit_chance)
 	var/targeting_human_readable = parse_zone_with_bodypart(targeting)
 
@@ -339,6 +351,10 @@
 		), ARMOR_MAX_BLOCK)
 
 	var/final_force = CALCULATE_FORCE(attacking_item, attack_modifiers)
+	// REDSHIFT ADDITION
+	if(!isnull(attacking_item.combat_attribute_damage_modifier))
+		final_force = get_weapon_damage_mod(attacking_item.combat_attribute_damage_modifier, final_force)
+	// REDSHIFT ADDITION END
 	if(mob_biotypes & (MOB_ROBOTIC|MOB_MINERAL|MOB_SKELETAL)) // this should probably check hit bodypart for humanoids
 		final_force *= attacking_item.get_demolition_modifier(src)
 
@@ -530,10 +546,10 @@
 	if(user == src)
 		attack_message_victim = "You [message_verb_simple] yourself[message_hit_area] with [weapon]."
 	visible_message(span_danger("[attack_message_spectator]"),\
-		span_userdanger("[attack_message_victim]"), null, COMBAT_MESSAGE_RANGE, user)
+		span_selfwarning("[attack_message_victim]"), null, COMBAT_MESSAGE_RANGE, user) // REDSHIFT EDIT - span_userdanger("[attack_message_victim]") , null, COMBAT_MESSAGE_RANGE, user)
 	if(is_blind())
-		to_chat(src, span_danger("Someone hits you[message_hit_area]!"))
-	to_chat(user, span_danger("[attack_message_attacker]"))
+		to_chat(src, span_selfwarning("Someone hits you[message_hit_area]!")) // REDSHIFT EDIT - to_chat(src, span_danger("Someone hits you[message_hit_area]!"))
+	to_chat(user, span_selfwarning("[attack_message_attacker]")) // REDSHIFT EDIT - to_chat(user, span_danger("[attack_message_attacker]"))
 	return 1
 
 /// Overridable proc so subtypes can have unique targetted strike zone messages, return a string.

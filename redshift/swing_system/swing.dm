@@ -5,6 +5,10 @@
 	var/secondary_swing_attack_speed
 	/// If the weapon can hit multiple living targets in swing attacks
 	var/swing_multihits = FALSE
+	/// If this item uses a specific skill define for combat when determining hit chance
+	var/combat_skill_hit_chance = null
+	/// If this weapon uses a specific attribute define for doing more or less damage
+	var/combat_attribute_damage_modifier = null
 
 /obj/item/Initialize(mapload)
 	. = ..()

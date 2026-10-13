@@ -7233,7 +7233,8 @@
 #include "redshift\armor_system\check_armor.dm"
 #include "redshift\armor_system\debug_armors_delete_later.dm"
 #include "redshift\armor_system\item_changes.dm"
-#include "redshift\attributes\attributes.dm"
+#include "redshift\attributes_and_skills\attributes.dm"
+#include "redshift\attributes_and_skills\skills.dm"
 #include "redshift\carry_weight\core.dm"
 #include "redshift\character_customization\preferences.dm"
 #include "redshift\character_customization\preferences_setup.dm"
@@ -7309,7 +7310,7 @@
 #include "redshift\species\species_types\insects\organs.dm"
 #include "redshift\species\species_types\reptile\bodyparts.dm"
 #include "redshift\species\species_types\reptile\reptile.dm"
-#include "redshift\species\species_types\slimes\slimes.dm"
 #include "redshift\swing_system\helpers.dm"
+#include "redshift\swing_system\mob_attack_messages.dm"
 #include "redshift\swing_system\swing.dm"
 // END_INCLUDE

@@ -1,4 +1,4 @@
-/mob/living/carbon
+/mob/living
 	/// List of all of this mob's attributes and their values
 	var/list/attributes = list(
 		ATTRIBUTE_AURA = DEFAULT_ATTRIBUTE_SCORE,
@@ -18,14 +18,14 @@
 		ATTRIBUTE_AWARENESS = 0,
 	)
 
-/mob/living/carbon/verb/view_attributes()
+/mob/living/verb/view_attributes()
 	set name = "Attributes"
 	set category = "Redshift"
 	set desc = "View your character's attributes."
 	attributes_to_chat()
 
 /// Prints a box with all of the carbon's attributes to chat
-/mob/living/carbon/proc/attributes_to_chat()
+/mob/living/proc/attributes_to_chat()
 	var/attributes_text = ""
 	for(var/attribute in attributes)
 		var/modifier = attribute_modifiers[attribute]
@@ -38,11 +38,11 @@
 	to_chat(src, fieldset_block("Attributes", attributes_text, "boxed_message"))
 
 /// Adjusts a carbon's attribute modifier by a given amount
-/mob/living/carbon/proc/adjust_attribute_modifier(attribute, adjustment)
+/mob/living/proc/adjust_attribute_modifier(attribute, adjustment)
 	attribute_modifiers[attribute] += adjustment
 
 /// Get's a carbon's score for an attribute, optionally adjusted by modifiers
-/mob/living/carbon/proc/get_attribute_score(attribute, modified = TRUE)
+/mob/living/proc/get_attribute_score(attribute, modified = TRUE)
 	if(!attribute)
 		return 0
 	var/score = attributes[attribute]
@@ -51,8 +51,30 @@
 	score += attribute_modifiers[attribute]
 	return score
 
+/// Returns a modifier to a chance to get hit by a melee attack depending on both awareness and reflex
+/mob/living/proc/get_melee_dodge_modifier()
+	var/reflex_score = get_attribute_score(ATTRIBUTE_REFLEX, TRUE)
+	var/awareness_score = get_attribute_score(ATTRIBUTE_AWARENESS, TRUE)
+	var/dodge_attribute_score = (reflex_score + awareness_score) / 2
+	switch(dodge_attribute_score)
+		if(1 to 5)
+			return 0
+		if(6 to MAX_ATTRIBUTE_SCORE)
+			return (dodge_attribute_score - 5) * -5
+
+/// Returns a multiplied damage amount based on the user's relevant attribute
+/mob/living/proc/get_weapon_damage_mod(relevant_attribute, original_force)
+	var/relevant_score = get_attribute_score(relevant_attribute)
+	switch(relevant_score)
+		if(0 to 4) // * 0.5 at 0, * 0.9 at 4
+			return original_force * (0.5 + (0.1 * relevant_score))
+		if(5 to 7)
+			return original_force
+		if(8 to MAX_ATTRIBUTE_SCORE) // * 1.1 (8) to * 1.3 (10)
+			return original_force * (1 + (0.1 * (relevant_score - 7)))
+
 /// Returns a multiplied time for a given attribute or attributes via a list and an original time
-/proc/attributes_adjusted_time(mob/living/carbon/holder, list/attributes_to_check, original_time)
+/proc/attributes_adjusted_time(mob/living/holder, list/attributes_to_check, original_time)
 	if(isnull(holder) || isnull(attributes_to_check) || isnull(original_time))
 		return
 	var/score_to_use = 0
