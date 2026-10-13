@@ -1,0 +1,62 @@
+{
+	"boxes_big": [
+		{
+			"type": "icon_state",
+			"icon_state": "boxes_pallet",
+			"blend_mode": "overlay"
+		},
+		{
+			"type": "icon_state",
+			"icon_state": "boxes_big",
+			"blend_mode": "overlay"
+		}
+	],
+	"boxes_stacked": [
+		{
+			"type": "icon_state",
+			"icon_state": "boxes_pallet",
+			"blend_mode": "overlay"
+		},
+		{
+			"type": "icon_state",
+			"icon_state": "boxes_stacked",
+			"blend_mode": "overlay"
+		}
+	],
+	"boxes_flat_messy": [
+		{
+			"type": "icon_state",
+			"icon_state": "boxes_pallet",
+			"blend_mode": "overlay"
+		},
+		{
+			"type": "icon_state",
+			"icon_state": "boxes_flat_messy",
+			"blend_mode": "overlay"
+		}
+	],
+	"boxes_flat_neat": [
+		{
+			"type": "icon_state",
+			"icon_state": "boxes_pallet",
+			"blend_mode": "overlay"
+		},
+		{
+			"type": "icon_state",
+			"icon_state": "boxes_flat_neat",
+			"blend_mode": "overlay"
+		}
+	],
+	"boxes_stacked_big": [
+		{
+			"type": "icon_state",
+			"icon_state": "boxes_pallet",
+			"blend_mode": "overlay"
+		},
+		{
+			"type": "icon_state",
+			"icon_state": "boxes_stacked_big",
+			"blend_mode": "overlay"
+		}
+	]
+}

@@ -1,0 +1,113 @@
+{
+	"shipping_big": [
+		{
+			"type": "icon_state",
+			"icon_state": "shipping_big_box",
+			"blend_mode": "overlay",
+			"color_ids": [1]
+		},
+		{
+			"type": "icon_state",
+			"icon_state": "shipping_big_bands",
+			"blend_mode": "overlay"
+		}
+	],
+	"shipping_short": [
+		{
+			"type": "icon_state",
+			"icon_state": "shipping_short_box",
+			"blend_mode": "overlay",
+			"color_ids": [1]
+		},
+		{
+			"type": "icon_state",
+			"icon_state": "shipping_short_bands",
+			"blend_mode": "overlay"
+		}
+	],
+	"shipping_short_stack": [
+		{
+			"type": "icon_state",
+			"icon_state": "shipping_short_box",
+			"blend_mode": "overlay",
+			"color_ids": [1]
+		},
+		{
+			"type": "icon_state",
+			"icon_state": "shipping_short_bands",
+			"blend_mode": "overlay"
+		},
+		{
+			"type": "icon_state",
+			"icon_state": "shipping_short_stack_box",
+			"blend_mode": "overlay",
+			"color_ids": [2]
+		},
+		{
+			"type": "icon_state",
+			"icon_state": "shipping_short_stack_bands",
+			"blend_mode": "overlay"
+		}
+	],
+	"shipping_short_stack_small": [
+		{
+			"type": "icon_state",
+			"icon_state": "shipping_short_box",
+			"blend_mode": "overlay",
+			"color_ids": [1]
+		},
+		{
+			"type": "icon_state",
+			"icon_state": "shipping_short_bands",
+			"blend_mode": "overlay"
+		},
+		{
+			"type": "icon_state",
+			"icon_state": "shipping_small_stack_box",
+			"blend_mode": "overlay",
+			"color_ids": [2]
+		},
+		{
+			"type": "icon_state",
+			"icon_state": "shipping_small_stack_bands",
+			"blend_mode": "overlay"
+		}
+	],
+	"shipping_small": [
+		{
+			"type": "icon_state",
+			"icon_state": "shipping_small_box",
+			"blend_mode": "overlay",
+			"color_ids": [1]
+		},
+		{
+			"type": "icon_state",
+			"icon_state": "shipping_small_bands",
+			"blend_mode": "overlay"
+		}
+	],
+	"shipping_small_stack": [
+		{
+			"type": "icon_state",
+			"icon_state": "shipping_small_box",
+			"blend_mode": "overlay",
+			"color_ids": [1]
+		},
+		{
+			"type": "icon_state",
+			"icon_state": "shipping_small_bands",
+			"blend_mode": "overlay"
+		},
+		{
+			"type": "icon_state",
+			"icon_state": "shipping_small_stack_box",
+			"blend_mode": "overlay",
+			"color_ids": [2]
+		},
+		{
+			"type": "icon_state",
+			"icon_state": "shipping_small_stack_bands",
+			"blend_mode": "overlay"
+		}
+	]
+}
